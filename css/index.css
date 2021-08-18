@@ -1,0 +1,213 @@
+:root {
+    /* Backgrounds */
+    --main-background: hsl(222, 26%, 31%);
+    --screen-background: hsl(224, 36%, 15%);
+    --keypad-background: hsl(223, 31%, 20%);
+
+    /* Keys */
+    --dark-blue-key-backgroun: hsl(225, 21%, 49%);
+    --dark-blue-key-shadow: hsl(224, 28%, 35%);
+    --red-key-background: hsl(6, 63%, 50%);
+    --dark-red-key-shadow: hsl(6, 70%, 34%);
+    --light-grayish-key-background: hsl(30, 25%, 89%);
+    --grayish-key-shadow: hsl(28, 16%, 65%);
+
+    /* Text */
+    --very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --white-text: #fff;
+
+}
+
+    
+/* - Mobile: 375px
+    - Desktop: 1440px  */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--main-background);
+
+    
+
+}
+
+/* ================= */
+/* TYPOGRAPHY */
+/* ================= */
+
+body {
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+}
+
+h1,h2,h3,h4 {
+    margin: 0;
+}
+
+
+/* ================= */
+/* LAYOUT */
+/* ================= */
+
+
+.container-center {
+    max-width: 375px;
+    min-width: 375px;
+    margin: 0 auto;
+
+}
+
+.container-calculator {
+    padding: 2em 1.5em;
+}
+
+.flex-space-between {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-space-around {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* ====================== */
+/* THEME SELECTOR
+/* ====================== */
+
+.theme-selector {
+    color: var(--white-text);
+}
+
+.slider {
+    width: 3rem;
+}
+
+.theme-row-1 {
+    width: 45%;
+}
+
+.theme-row-2 {
+    width: 45%;
+    margin-top: .5em;
+}
+
+.slider-container {
+    background: var(--keypad-background);
+    padding: 2px 3px;
+    border-radius: 15px;
+}
+
+.container-slider-label {
+    font-size: .75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-top: 10px;
+}
+
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    background: var(--keypad-background);
+    outline: none;
+    width: 3.5rem;
+    /* padding: 2px 3px; */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: var(--red-key-background); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+/* ====================== */
+/* CALCULATOR DISPLAY
+/* ====================== */
+
+
+.container-display {
+    padding: 1.5em 0 1.5em 0
+}
+.display {
+    height: 1em;
+    padding: .75em .5em;
+    text-align: right;
+    font-family: 'Spartan', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--white-text);
+    background: var(--screen-background);
+    outline: none;
+    border: none;
+    border-radius: 8px;
+}
+
+/* ====================== */
+/* CONTAINER-BTNS
+/* ====================== */
+
+.container-btns {
+    width: 90%;
+    padding: 1em;
+    background: var(--keypad-background);
+    border-radius: 8px;
+}
+
+.btn-row {
+    margin-bottom: .5em;
+}
+
+.btn {
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Spartan', sans-serif;
+    border: solid 2px #252525;
+    border-radius: 7px; 
+}
+
+.sml-btn {
+    width: 22.5%;
+    color: var(--very-dark-grayish-blue);
+    background: var(--light-grayish-key-background);
+    box-shadow: inset 0px -3px 5px var(--grayish-key-shadow);
+}
+
+.num-btn {
+    font-size: 25px;
+    padding: .45em 0;
+}
+
+.blue-btn {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--white-text);
+    background: var(--dark-blue-key-backgroun);
+    box-shadow: inset 0px -3px 5px var(--dark-blue-key-shadow);
+}
+
+.lrg-btn {
+    width: 48%;
+    font-size: 1rem;
+    color: var(--white-text);
+    text-transform: uppercase;
+    padding: 1em 0;
+}
+
+.equals-btn {
+    background: var(--red-key-background);
+    box-shadow: inset 0px -3px 5px var(--dark-red-key-shadow);
+}
+
+
+
+
+
+
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <title>calculator</title>
+</head>
+<body>
+    <main>
+        <div class="container-center"> <!-- Center main content -->
+            <div class="container-calculator"> <!-- Contain calculator content -->
+                <div class="theme-selector flex-space-between"> <!-- display flex to layout content -->
+                    <div class="theme-row-1">
+                        <div class="logo">
+                            <h1>calc</h1>
+                        </div>
+                    </div>
+                    <div class="theme-row-2"> <!-- Create 2 rows inside of row 2 with flex row-->
+                        <div class="flex-space-around">
+                            <div class="container-slider-label">
+                                <span class="slider-label">theme</span>
+                            </div>
+
+                            <div class="slider-container">
+                                <input type="range" min="1" max="3" value="1" class="slider" id="myRange">
+                            </div>
+                        </div>
+                    </div>
+                        
+                </div>
+
+                <div class="container-display">
+                    <div class="display" id="number-display"></div>
+                </div>
+                    <!-- <div class="calculator-display">
+                        <input type="number" pattern="[0-9]" step="any" class="calculator-input" id="number-input">
+                    </div> -->
+
+                <div class="container-btns">
+                    <div class="btn-row flex-space-between"> <!-- Create first row of buttons-->
+                        <button class="btn sml-btn num-btn">7</button>
+                        <button class="btn sml-btn num-btn">8</button>
+                        <button class="btn sml-btn num-btn">9</button>
+                        <button class="btn sml-btn blue-btn" id="delete">del</button>
+                    </div>
+                    <div class="btn-row flex-space-between"> <!-- Create first row of buttons-->
+                        <button class="btn sml-btn num-btn">5</button>
+                        <button class="btn sml-btn num-btn">4</button>
+                        <button class="btn sml-btn num-btn">6</button>
+                        <button class="btn sml-btn operator-btn">+</button>
+                    </div>
+                    <div class="btn-row flex-space-between"> <!-- Create first row of buttons-->
+                        <button class="btn sml-btn num-btn">1</button>
+                        <button class="btn sml-btn num-btn">2</button>
+                        <button class="btn sml-btn num-btn">3</button>
+                        <button class="btn sml-btn operator-btn">-</button>
+                    </div>
+                    <div class="btn-row flex-space-between"> <!-- Create first row of buttons-->
+                        <button class="btn sml-btn num-btn">.</button>
+                        <button class="btn sml-btn num-btn">0</button>
+                        <button class="btn sml-btn operator-btn">/</button>
+                        <button class="btn sml-btn num-btn operator-btn" >x</button>
+                    </div>
+                    <div class="flex-space-between"> <!-- Create first row of buttons-->
+                        <button class="btn lrg-btn blue-btn" id="reset-btn">reset</button>
+                        <button class="btn lrg-btn equals-btn" id="equals">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src=js/index.js></script>
+</body>
+</html>
