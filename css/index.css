@@ -61,7 +61,7 @@ h1,h2,h3,h4 {
 }
 
 .container-calculator {
-    padding: 2em 1.5em;
+    padding: 1.5em 1.5em;
 }
 
 .flex-space-between {
@@ -85,27 +85,36 @@ h1,h2,h3,h4 {
     color: var(--theme-sel-text);
 }
 
+.logo {
+     padding-top: 1.5em;
+}
+
 .slider {
     width: 3rem;
 }
 
 .theme-row-1 {
-    width: 45%;
+    width: 35%;
 }
 
 .theme-row-2 {
-    width: 45%;
+    width: 55%;
 }
 
 .slider-range {
     font-size: .85rem;
-    margin-top: 0;
-    padding: 0 .5em;
+    padding: .5em;
+}
+
+.themes {
+    padding: 0 .6em;
 }
 
 .theme-slider {
+    width: 75%;
+    margin: 0 auto;
     background: var(--keypad-background);
-    padding: 2px 3px;
+    padding: 3px;
     border-radius: 15px;
 }
 
@@ -113,15 +122,16 @@ h1,h2,h3,h4 {
     font-size: .85rem;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding-top: 2em;
+    padding-top: 3em;
     margin-right: 2em;
 }
+
 
 .slider {
     -webkit-appearance: none;  /* Override default CSS styles */
     background: var(--keypad-background);
     outline: none;
-    width: 4.25rem;
+    width: 85%;
 }
 
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
@@ -145,7 +155,7 @@ h1,h2,h3,h4 {
 }
 .display {
     height: 1em;
-    padding: .75em .5em;
+    padding: .85em .5em;
     text-align: right;
     font-family: 'Spartan', sans-serif;
     font-size: 32px;
@@ -162,8 +172,8 @@ h1,h2,h3,h4 {
 /* ====================== */
 
 .container-btns {
-    width: 90%;
-    padding: 1em;
+    width: 85%;
+    padding: 1.5em;
     background: var(--keypad-background);
     border-radius: 15px;
 }
@@ -185,7 +195,7 @@ h1,h2,h3,h4 {
     width: 22%;
     color: var(--key-text);
     background: var(--sml-key-background);
-    box-shadow: inset 0px -3px 5px var(--sml-key-shadow);
+    box-shadow: inset 0px -4px var(--sml-key-shadow);
 }
 
 .num-btn {
@@ -198,7 +208,7 @@ h1,h2,h3,h4 {
     text-transform: uppercase;
     color: var(--special-key-text);
     background: var(--delete-key-background);
-    box-shadow: inset 0px -3px 5px var(--delete-key-shadow);
+    box-shadow: inset 0px -4px var(--delete-key-shadow);
 }
 
 .lrg-btn {
@@ -211,8 +221,12 @@ h1,h2,h3,h4 {
 
 .equals-btn {
     background: var(--equals-key-background);
-    box-shadow: inset 0px -3px 5px var(--equals-key-shadow);
+    box-shadow: inset 0px -4px var(--equals-key-shadow);
 }
+
+
+
+
 
 
 
