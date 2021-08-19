@@ -5,16 +5,19 @@
     --keypad-background: hsl(223, 31%, 20%);
 
     /* Keys */
-    --dark-blue-key-backgroun: hsl(225, 21%, 49%);
-    --dark-blue-key-shadow: hsl(224, 28%, 35%);
-    --red-key-background: hsl(6, 63%, 50%);
-    --dark-red-key-shadow: hsl(6, 70%, 34%);
-    --light-grayish-key-background: hsl(30, 25%, 89%);
-    --grayish-key-shadow: hsl(28, 16%, 65%);
+    --delete-key-background: hsl(225, 21%, 49%);
+    --delete-key-shadow: hsl(224, 28%, 35%);
+    --equals-key-background: hsl(6, 63%, 50%);
+    --equals-key-shadow: hsl(6, 70%, 34%);
+    --sml-key-background: hsl(30, 25%, 89%);
+    --sml-key-shadow: hsl(28, 16%, 65%);
 
     /* Text */
-    --very-dark-grayish-blue: hsl(221, 14%, 31%);
-    --white-text: #fff;
+    --key-text: hsl(221, 14%, 31%);
+    --special-key-text: #fff;
+    --theme-sel-text: #fff;
+    --output-text: #fff;
+    
 
 }
 
@@ -79,7 +82,7 @@ h1,h2,h3,h4 {
 /* ====================== */
 
 .theme-selector {
-    color: var(--white-text);
+    color: var(--theme-sel-text);
 }
 
 .slider {
@@ -92,28 +95,33 @@ h1,h2,h3,h4 {
 
 .theme-row-2 {
     width: 45%;
-    margin-top: .5em;
 }
 
-.slider-container {
+.slider-range {
+    font-size: .85rem;
+    margin-top: 0;
+    padding: 0 .5em;
+}
+
+.theme-slider {
     background: var(--keypad-background);
     padding: 2px 3px;
     border-radius: 15px;
 }
 
 .container-slider-label {
-    font-size: .75rem;
+    font-size: .85rem;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding-top: 10px;
+    padding-top: 2em;
+    margin-right: 2em;
 }
 
 .slider {
     -webkit-appearance: none;  /* Override default CSS styles */
     background: var(--keypad-background);
     outline: none;
-    width: 3.5rem;
-    /* padding: 2px 3px; */
+    width: 4.25rem;
 }
 
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
@@ -123,7 +131,7 @@ h1,h2,h3,h4 {
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    background: var(--red-key-background); /* Green background */
+    background: var(--equals-key-background); /* Green background */
     cursor: pointer; /* Cursor on hover */
   }
 
@@ -133,7 +141,7 @@ h1,h2,h3,h4 {
 
 
 .container-display {
-    padding: 1.5em 0 1.5em 0
+    padding: 1.75em 0 1.5em 0;
 }
 .display {
     height: 1em;
@@ -142,7 +150,7 @@ h1,h2,h3,h4 {
     font-family: 'Spartan', sans-serif;
     font-size: 32px;
     font-weight: 700;
-    color: var(--white-text);
+    color: var(--output-text);
     background: var(--screen-background);
     outline: none;
     border: none;
@@ -157,53 +165,55 @@ h1,h2,h3,h4 {
     width: 90%;
     padding: 1em;
     background: var(--keypad-background);
-    border-radius: 8px;
+    border-radius: 15px;
 }
 
 .btn-row {
-    margin-bottom: .5em;
+    margin-bottom: 1em;
 }
 
 .btn {
     text-align: center;
+    font-size: 32px;
     font-weight: 700;
     font-family: 'Spartan', sans-serif;
-    border: solid 2px #252525;
-    border-radius: 7px; 
+    border: none;
+    border-radius: 8px; 
 }
 
 .sml-btn {
-    width: 22.5%;
-    color: var(--very-dark-grayish-blue);
-    background: var(--light-grayish-key-background);
-    box-shadow: inset 0px -3px 5px var(--grayish-key-shadow);
+    width: 22%;
+    color: var(--key-text);
+    background: var(--sml-key-background);
+    box-shadow: inset 0px -3px 5px var(--sml-key-shadow);
 }
 
 .num-btn {
-    font-size: 25px;
-    padding: .45em 0;
+    font-size: 28px;
+    padding: .5em 0;
 }
 
 .blue-btn {
     font-size: 1rem;
     text-transform: uppercase;
-    color: var(--white-text);
-    background: var(--dark-blue-key-backgroun);
-    box-shadow: inset 0px -3px 5px var(--dark-blue-key-shadow);
+    color: var(--special-key-text);
+    background: var(--delete-key-background);
+    box-shadow: inset 0px -3px 5px var(--delete-key-shadow);
 }
 
 .lrg-btn {
     width: 48%;
     font-size: 1rem;
-    color: var(--white-text);
+    color: var(--special-key-text);
     text-transform: uppercase;
     padding: 1em 0;
 }
 
 .equals-btn {
-    background: var(--red-key-background);
-    box-shadow: inset 0px -3px 5px var(--dark-red-key-shadow);
+    background: var(--equals-key-background);
+    box-shadow: inset 0px -3px 5px var(--equals-key-shadow);
 }
+
 
 
 

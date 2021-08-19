@@ -99,3 +99,6 @@ resetBtn.addEventListener("click", (e) => {
 equalsBtn.addEventListener("click", () => {
     calculator.preformOperation()
 })
+
+
+
