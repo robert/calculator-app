@@ -236,7 +236,8 @@ h1,h2,h3,h4 {
 @media(min-width: 1440px) {
 
     .container-center {
-        max-width: 500px
+        max-width: 500px;
+        margin-top: 3em;
     }
 
     .slider-container {
