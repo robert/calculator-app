@@ -79,12 +79,18 @@ function getTheme3() {
 
 }
 
+function changeDefaultSlidePos() {
+    themeSelector.value = 3;
+}
+
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     getTheme3()
+    themeSelector.value = 3
 }
 
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
     getTheme2()
+    themeSelector.value = 2
 }
 
 
