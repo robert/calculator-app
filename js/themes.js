@@ -81,7 +81,10 @@ function getTheme3() {
 
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     getTheme3()
-    
+}
+
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    getTheme2()
 }
 
 
