@@ -45,6 +45,7 @@ body {
 
 h1,h2,h3,h4 {
     margin: 0;
+    padding: 0;
 }
 
 
@@ -76,6 +77,11 @@ h1,h2,h3,h4 {
     justify-content: space-around;
 }
 
+.flex-end {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
 
 /* ====================== */
 /* THEME SELECTOR
@@ -85,45 +91,47 @@ h1,h2,h3,h4 {
     color: var(--theme-sel-text);
 }
 
-.logo {
-     padding-top: 1.5em;
-}
-
-.slider {
-    width: 3rem;
-}
-
 .theme-row-1 {
     width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .theme-row-2 {
     width: 55%;
 }
 
+.slider-container {
+    width: 50%;
+}
+
 .slider-range {
-    font-size: .85rem;
-    padding: .5em;
+    margin-left: 20px;
+    padding-bottom: .25em;
 }
 
 .themes {
-    padding: 0 .6em;
+    font-size: .85rem;
+    padding: 0 .4em;
 }
 
 .theme-slider {
     width: 75%;
-    margin: 0 auto;
+    margin-left: 15px;
     background: var(--keypad-background);
     padding: 3px;
     border-radius: 15px;
 }
 
 .container-slider-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     font-size: .85rem;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding-top: 3em;
-    margin-right: 2em;
+    margin-right: 1em;
 }
 
 
@@ -131,10 +139,10 @@ h1,h2,h3,h4 {
     -webkit-appearance: none;  /* Override default CSS styles */
     background: var(--keypad-background);
     outline: none;
-    width: 85%;
+    width: 100%;
 }
 
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+/* The slider handle */
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
     appearance: none;
@@ -172,7 +180,6 @@ h1,h2,h3,h4 {
 /* ====================== */
 
 .container-btns {
-    width: 85%;
     padding: 1.5em;
     background: var(--keypad-background);
     border-radius: 15px;
@@ -222,7 +229,26 @@ h1,h2,h3,h4 {
 .equals-btn {
     background: var(--equals-key-background);
     box-shadow: inset 0px -4px var(--equals-key-shadow);
+    color: var(--special-key-text)
 }
+
+
+@media(min-width: 1440px) {
+
+    .container-center {
+        max-width: 500px
+    }
+
+    .slider-container {
+        width: 40%;
+    }
+
+    .themes {
+        padding: 0 .5em;
+    } 
+
+}
+
 
 
 

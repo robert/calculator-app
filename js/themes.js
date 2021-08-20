@@ -79,6 +79,11 @@ function getTheme3() {
 
 }
 
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    getTheme3()
+    
+}
+
 
 
 
