@@ -4,8 +4,6 @@ themeSelector.addEventListener("input", changeTheme)
 
 function changeTheme() {
     const theme = themeSelector.value
-
-    
     switch (theme) {
         case "1":
             getTheme1()
@@ -79,10 +77,6 @@ function getTheme3() {
 
 }
 
-function changeDefaultSlidePos() {
-    themeSelector.value = 3;
-}
-
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     getTheme3()
     themeSelector.value = 3
@@ -92,21 +86,3 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matc
     getTheme2()
     themeSelector.value = 2
 }
-
-
-
-
-
-
-
-
-
-
-
-// const body = document.querySelector("body")
-// const screen = document.getElementById("number-display")
-// const keyPad = document.getElementById("container-btns")
-// const smlBtns = document.querySelectorAll(".sml-btn")
-// // const deleteBtn = document.getElementById("delete-btn")
-// // const equalsBtn = document.getElementById("equals-btn")
-// // const resetBtn = document.getElementById("reset-btn")
