@@ -106,22 +106,17 @@ h1,h2,h3,h4 {
     width: 50%;
 }
 
-.slider-range {
-    margin-left: 20px;
-    padding-bottom: .25em;
+.theme-label {
+    padding-left: 26px;
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    
 }
 
 .themes {
     font-size: .85rem;
-    padding: 0 .4em;
-}
-
-.theme-slider {
-    width: 75%;
-    margin-left: 15px;
-    background: var(--keypad-background);
-    padding: 3px;
-    border-radius: 15px;
+    padding: 0;
 }
 
 .container-slider-label {
@@ -132,6 +127,14 @@ h1,h2,h3,h4 {
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-right: 1em;
+}
+
+.theme-slider {
+    width: 75%;
+    margin-left: 20px;
+    background: var(--keypad-background);
+    padding: 3px;
+    border-radius: 15px;
 }
 
 
@@ -236,17 +239,18 @@ h1,h2,h3,h4 {
 @media(min-width: 1440px) {
 
     .container-center {
-        max-width: 500px;
-        margin-top: 3em;
+        max-width: 550px;
+        margin-top: 4em;
     }
 
     .slider-container {
         width: 40%;
     }
 
-    .themes {
-        padding: 0 .5em;
-    } 
+    .theme-slider {
+        width: 65%;
+        margin-left: 26px;
+    }
 
 }
 
