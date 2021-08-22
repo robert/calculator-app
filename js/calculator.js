@@ -11,7 +11,6 @@ class Calculator { // Create calculator class
     constructor(){
         this.displayValue = ""
         this.operation = [] // Create empty array to store operation in
-        this.answer = 0
     }
 
     appendInput(number) {
@@ -32,41 +31,38 @@ class Calculator { // Create calculator class
 
     delete() {
         if(this.displayValue !== "") {
-            subStr = this.displayValue // Create variable with calculators current value
-            subStr = this.subStr.substring(0, subStr.length -1) // Remove last char from string
-            this.calculatorDisplay.textContent = subStr // Display new value
+            this.displayValue = this.displayValue.substring(0, this.displayValue.length -1)
         }
     }
 
     resetAll() {
-        this.calculatorDisplay.textContent = ""
+        this.displayValue = ""
         this.operation = []
     }
 
-
-    preformOperation() {
+    performOperation() {
         this.operation.push(this.displayValue) // Get last value entered
-        this.answer = parseFloat(this.operation[0]) // Set answer to equal first number in operation array
+        answer = parseFloat(this.operation[0]) // Set answer to equal first number in operation array
 
         if(this.operation.length >= 3) {
             this.clearInput()
             for(let i =0; i< this.operation.length; i++) { // Loop through the operation array looking for operators
                 switch (this.operation[i]) {
                 case "+":
-                    this.answer = this.answer + parseFloat(this.operation[i+1]) // Set answer to equal current
+                    answer = answer + parseFloat(this.operation[i+1]) // Set answer to equal current
                     break                                                      // value plus next number in array
                 case "-":
-                    this.answer = this.answer - parseFloat(this.operation[i+1])
+                    answer = answer - parseFloat(this.operation[i+1])
                     break
                 case "x":
-                    this.answer = this.answer * parseFloat(this.operation[i+1])
+                    answer = answer * parseFloat(this.operation[i+1])
                     break
                 case "/":
-                    this.answer = this.answer / parseFloat(this.operation[i+1])
+                    answer = answer / parseFloat(this.operation[i+1])
                     break
                 }
             }
-            this.displayValue = this.answer  // Display answer once for loop has finished
+            this.displayValue = answer  // Display answer once for loop has finished
             this.operation = [] // set operation array back to and empty array
         }
     }
@@ -77,7 +73,7 @@ const calculator = new Calculator()
 for(let btn of numBtns) { // Add event listner to each number btn
     btn.addEventListener("click", () => {
         calculator.appendInput(btn.textContent) // Display btns text content when clicked
-        calculatorDisplay.textContext = calculator.displayValue
+        calculatorDisplay.textContent = calculator.displayValue
         console.log(calculatorDisplay.textContent)
         console.log(calculator.displayValue)
     })
@@ -86,23 +82,21 @@ for(let btn of numBtns) { // Add event listner to each number btn
 for(let btn of operatorBtns) { // Add event listner to each operator btn
     btn.addEventListener("click", () => {
         calculator.getOperation(btn.textContent) // Run calculators get operation function when clicked
-        calculatorDisplay.textContext = calculator.displayValue
+        calculatorDisplay.textContent = calculator.displayValue
     })
 }
 
 deleteBtn.addEventListener("click", () => {
     calculator.delete()
-    calculatorDisplay.textContext = calculator.displayValue
+    calculatorDisplay.textContent = calculator.displayValue
 })
 
 resetBtn.addEventListener("click", (e) => {
     calculator.resetAll()
-    calculatorDisplay.textContext = calculator.displayValue
+    calculatorDisplay.textContent = calculator.displayValue
 })
 
 equalsBtn.addEventListener("click", () => {
-    calculator.preformOperation()
-    calculatorDisplay.textContext = calculator.displayValue
+    calculator.performOperation()
+    calculatorDisplay.textContent = calculator.displayValue
 })
-
-console.log("HI")
