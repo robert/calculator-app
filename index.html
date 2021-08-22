@@ -50,38 +50,40 @@
                     
                 <div class="container-btns">
                     <div class="btn-row flex-space-between"> <!-- Create first row of buttons-->
-                        <button class="btn sml-btn num-btn">7</button>
-                        <button class="btn sml-btn num-btn">8</button>
-                        <button class="btn sml-btn num-btn">9</button>
+                        <button class="btn sml-btn calculator-btn">7</button>
+                        <button class="btn sml-btn calculator-btn">8</button>
+                        <button class="btn sml-btn calculator-btn">9</button>
                         <button class="btn sml-btn blue-btn" id="delete-btn">del</button>
                     </div>
                     <div class="btn-row flex-space-between"> <!-- Create second row of buttons-->
-                        <button class="btn sml-btn num-btn">5</button>
-                        <button class="btn sml-btn num-btn">4</button>
-                        <button class="btn sml-btn num-btn">6</button>
-                        <button class="btn sml-btn operator-btn">+</button>
+                        <button class="btn sml-btn calculator-btn">5</button>
+                        <button class="btn sml-btn calculator-btn">4</button>
+                        <button class="btn sml-btn calculator-btn">6</button>
+                        <button class="btn sml-btn calculator-btn">+</button>
                     </div>
                     <div class="btn-row flex-space-between"> <!-- Create third row of buttons-->
-                        <button class="btn sml-btn num-btn">1</button>
-                        <button class="btn sml-btn num-btn">2</button>
-                        <button class="btn sml-btn num-btn">3</button>
-                        <button class="btn sml-btn operator-btn">-</button>
+                        <button class="btn sml-btn calculator-btn">1</button>
+                        <button class="btn sml-btn calculator-btn">2</button>
+                        <button class="btn sml-btn calculator-btn">3</button>
+                        <button class="btn sml-btn calculator-btn">-</button>
                     </div>
                     <div class="btn-row flex-space-between"> <!-- Create fourth row of buttons-->
-                        <button class="btn sml-btn num-btn">.</button>
-                        <button class="btn sml-btn num-btn">0</button>
-                        <button class="btn sml-btn operator-btn">/</button>
-                        <button class="btn sml-btn num-btn operator-btn" >x</button>
+                        <button class="btn sml-btn calculator-btn">.</button>
+                        <button class="btn sml-btn calculator-btn">0</button>
+                        <button class="btn sml-btn calculator-btn">/</button>
+                        <button class="btn sml-btn calculator-btn" >x</button>
                     </div>
                     <div class="flex-space-between"> <!-- Create last row of buttons-->
                         <button class="btn lrg-btn blue-btn" id="reset-btn">reset</button>
-                        <button class="btn lrg-btn equals-btn" id="equals-btn">=</button>
+                        <button class="btn lrg-btn calculator-btn" id="equals-btn">=</button>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <script src=js/calculator.js></script>
+    <!--<script src=js/lazy-calculator.js></script>-->
+    <script src=js/stateful-calculator.js></script>
+    <script src=js/ui.js></script>
     <script src=js/themes.js></script>
 </body>
 </html>
